@@ -2,6 +2,7 @@ name: Validate CloudFormation on PR
 
 on:
   pull_request:
+     types: [opened, synchronize, reopened, closed]
      paths:
         - 'cloudformation/**'
 
@@ -58,3 +59,4 @@ jobs:
          run: |
            stack_name="ab-my-test-stack-${{ github.event.pull_request.number}}"
            aws cloudformation delete-stack --stack-name $stack_name
+           aws cloudformation wait stack-delete-complete --stack-name $stack_name
