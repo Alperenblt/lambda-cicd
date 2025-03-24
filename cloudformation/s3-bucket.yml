@@ -11,7 +11,7 @@ Parameters:
       - production
 
 Resources:
-  MyS3Bucket:
+  MyNewS3BucketWithActions:
     Type: 'AWS::S3::Bucket'
     Properties:
       BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
