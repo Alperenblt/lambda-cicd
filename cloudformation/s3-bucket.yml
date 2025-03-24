@@ -20,10 +20,9 @@ Resources:
           Value: !Ref Environment
         - Key: Project
           Value: GithubActionsTesting
-        - Key: Project
-          Value: GithubNewActionsTesting    
+         
 
 Outputs:
   BucketName:
     Description: 'Name of created S3 Bucket'
-    Value: !Ref MyS3Bucket
+    Value: !Ref MyNewS3BucketWithActions
