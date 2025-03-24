@@ -21,6 +21,7 @@ Resources:
         - Key: Project
           Value: GithubActionsTesting
          
+
 Outputs:
   BucketName:
     Description: 'Name of created S3 Bucket'
