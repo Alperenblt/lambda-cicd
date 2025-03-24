@@ -40,7 +40,7 @@ jobs:
              issue_number: context.issue.number,
              owner: context.repo.owner,
              repo: context.repo.repo,
-             body: 'Cloudformation test stack deployed. Stack name: pr-test-stack-${{ github.event.pull_request.number}}'
+             body: 'Cloudformation test stack deployed. Stack name: ab-my-test-stack-${{ github.event.pull_request.number}}'
             
              })    
 
@@ -57,5 +57,5 @@ jobs:
 
        - name: Delete Test Stack
          run: |
-           stack_name="pr-test-stack-${{github.event.pull_request.number}}"
+           stack_name="ab-my-test-stack-${{github.event.pull_request.number}}"
            aws cloudformation delete-stack --stack-name $stack_name
