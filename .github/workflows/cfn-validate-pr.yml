@@ -45,7 +45,7 @@ jobs:
 
   cleanup-on-merge:
      runs-on: ubuntu-latest
-     if: github.event.pull_request.merged == true
+     if : github.event.pull_request.merged == true
      steps:
        - name: Configure AWS Credentials
          uses: aws-actions/configure-aws-credentials@v1
@@ -56,5 +56,5 @@ jobs:
 
        - name: Delete Test Stack
          run: |
-           stack_name="ab-my-test-stack-${{github.event.pull_request.number}}"
+           stack_name="ab-my-test-stack-${{ github.event.pull_request.number}}"
            aws cloudformation delete-stack --stack-name $stack_name
