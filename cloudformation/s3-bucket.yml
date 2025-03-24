@@ -11,7 +11,7 @@ Parameters:
       - production
 
 Resources:
-  MyNewS3BucketWithActions:
+  S3BucketGithubActions:
     Type: 'AWS::S3::Bucket'
     Properties:
       BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
@@ -25,4 +25,4 @@ Resources:
 Outputs:
   BucketName:
     Description: 'Name of created S3 Bucket'
-    Value: !Ref MyNewS3BucketWithActions
+    Value: !Ref S3BucketGithubActions
