@@ -11,7 +11,7 @@ Parameters:
       - production
 
 Resources:
-  MyS3Bucket:
+  MyNewS3BucketWithActions:
     Type: 'AWS::S3::Bucket'
     Properties:
       BucketName: !Sub '${AWS::StackName}-${Environment}-bucket'
@@ -19,7 +19,9 @@ Resources:
         - Key: Environment
           Value: !Ref Environment
         - Key: Project
-          Value: GithubActionsTesting  
+          Value: GithubActionsTesting
+        - Key: Project
+          Value: GithubNewActionsTesting    
 
 Outputs:
   BucketName:
