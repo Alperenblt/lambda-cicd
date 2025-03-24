@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: 'S3 bucket wiith environment tagging'
+Description: 'S3 bucket with environment tagging'
 
 Parameters:
   Environment:
